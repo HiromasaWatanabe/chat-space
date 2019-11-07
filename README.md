@@ -14,7 +14,7 @@
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|groupName|text|null: false|
+|name|string|null: false|
 ### Association
 - has_many :users_groups
 - has_many :users, through: :users_groups
@@ -32,10 +32,26 @@
 ## messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|text|text|null: false|
-|image|text|null: false|
+|text_id|integer|null: false, foreign_key: true|
+|image_id|integer|null: false, foreign_key: true|
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 ### Association
+- belongs_to :text
+- belongs_to :image
 - belongs_to :user
 - belongs_to :group
+
+## textテーブル
+|Column|Type|Options|
+|------|----|-------|
+|text|text|null: false|
+### Association
+- has_many :messages
+
+## imageテーブル
+|Column|Type|Options|
+|------|----|-------|
+|image|text|null: false|
+### Association
+- has_many :messages
