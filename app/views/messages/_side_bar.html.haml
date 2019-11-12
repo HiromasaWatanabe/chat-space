@@ -1,0 +1,20 @@
+.side-chat
+  .side-header
+    .side-header__box
+      %p.side-header__box__user-name
+        SampleMan
+      %ui.side-header__box__menu
+        =link_to "#", class: "side-header__box__menu__new-group" do
+          %i.fa.fa-edit
+          %span<>
+        =link_to "#", class: "%side-header__box__menu__edit-user" do
+          %i.fas.fa-cog
+          %span<>
+
+
+  .groups
+    .group
+      .group__group-name
+        sample
+      .group__latest-message
+        test

@@ -1,0 +1,32 @@
+.main-chat
+  .main-chat-header
+    .main-chat-header__left-box
+      %h2.main-chat-header__left-box__current-group
+        group name
+      %ul.main-chat-header__left-box__member-list
+        Menber:
+        %li.main-chat-header__left-box__member-list__member
+          SampleMan
+    .main-chat-header__edit-btn
+      Edit
+
+
+  .messages
+    .message
+      .message__info
+        .message__info__taker
+          SampleMan
+        .message__info__date
+          2019/10/08/19:14:39
+      %p.message__text
+        this is first message
+
+
+  .form
+    %form.form__message
+      .form__input-box
+        %input{class: "form__input-box__text", placeholder: "type a message", type: "text"}
+        %label{class: "form__input-box__image"}
+          = icon("fas", "image")
+          %input.hidden{type: "file"}
+      %input.submit-btn{type: "submit", value: "Send"}
