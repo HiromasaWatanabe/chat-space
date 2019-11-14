@@ -2,12 +2,12 @@
   .side-header
     .side-header__box
       %p.side-header__box__user-name
-        SampleMan
+        = current_user.name
       %ui.side-header__box__menu
         =link_to "#", class: "side-header__box__menu__new-group" do
           %i.fa.fa-edit
           %span<>
-        =link_to "#", class: "%side-header__box__menu__edit-user" do
+        =link_to "/users/#{current_user.id}/edit",method: :get, class: "side-header__box__menu__edit-user" do
           %i.fas.fa-cog
           %span<>
 
