@@ -8,7 +8,10 @@
         %li.main-chat-header__left-box__member-list__member
           SampleMan
     .main-chat-header__edit-btn
-      Edit
+      = link_to "Edit","/groups/#{current_user.id}/edit",method: :get
+      
+
+        
 
 
   .messages
