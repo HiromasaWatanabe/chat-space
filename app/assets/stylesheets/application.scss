@@ -1,7 +1,8 @@
-@import "./reset";
-@import "colors";
 @import "font-awesome-sprockets";
 @import "./font-awesome";
+@import "./reset";
+@import "colors";
+@import "vendor_prefix";
 @import "messages";
 @import "side_bar";
 @import "main_chat";
