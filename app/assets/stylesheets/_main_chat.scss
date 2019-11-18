@@ -34,78 +34,144 @@
     }
   }
 
-
-  .messages{
-    height: calc(100vh - 190px);
-    padding: 46px 40px;
-    background-color: #fafafa;
-    overflow: scroll;
+  .messages {
+    background-color: #FAFAFA;
     box-sizing: border-box;
-    .message{
-      padding-bottom: 40px;
-      &__info{
+    padding: 46px 40px 0;
+    height: calc(100vh - 100px - 90px);
+    overflow: scroll;
+    .message {
+      .upper-message {
         display: flex;
-        margin-bottom: 10px;
-        &__taker{
-          color: $main_gray_dark;
+        &__user-name {
+          color: #434a54;
           font-size: 16px;
           font-weight: bold;
         }
-        &__date{
-          color: $main_gray_light;
+        &__date {
+          color: #999;
           font-size: 12px;
-          margin-left: 10px;
+          padding-left: 10px;
         }
       }
-      &__text{
-        color: $main_gray_dark;
-        font-size: 14px;
+      .lower-message {
+        margin-top: 10px;
+        &__content {
+          color: #434a54;
+          font-size: 14px;
+          margin-bottom: 40px;
+        }
       }
     }
   }
+  // .messages{
+  //   height: calc(100% - 190px);
+  //   padding: 46px 40px;
+  //   background-color: #fafafa;
+  //   overflow: scroll;
+  //   box-sizing: border-box;
+  //   .message{
+  //     padding-bottom: 40px;
+  //     &__info{
+  //       display: flex;
+  //       margin-bottom: 10px;
+  //       &__taker{
+  //         color: $main_gray_dark;
+  //         font-size: 16px;
+  //         font-weight: bold;
+  //       }
+  //       &__date{
+  //         color: $main_gray_light;
+  //         font-size: 12px;
+  //         margin-left: 10px;
+  //       }
+  //     }
+  //     &__text{
+  //       color: $main_gray_dark;
+  //       font-size: 14px;
+  //     }
+  //   }
+  // }
 
 
-  .form{
-    height: 90px;
-    padding: 20px 40px;
-    background-color: #ddd;
+  .form {
+    background-color: #DDDDDD;
     box-sizing: border-box;
-    &__message{
-      display: flex;
+    height: 90px;
+    padding: 20px 50px 20px 40px;
+    &__message {
       border: none;
+      float: left;
       height: 50px;
-      width: 100%;
+      width: calc(100% - 150px);
     }
-      &__input-box{
-        position: relative;
-        width: 100%;
-        &__text{
-          height: 50px;
-          width: calc(100% - 50px);
-          padding: 0 40px 0 10px;
-          color: $main_gray_dark;
-          border-style: none;
-        }
-        &__image{
-          font-size: 1.3rem;
-          position: absolute;
-          top: 10px;
-          right: 10px;
-          cursor: pointer;
-          .hidden{
-            display: none;
-          }
-        }
+    &__mask {
+      background-color: $white;
+      float: left;
+      height: 50px;
+      padding-right: 10px;
+      &__image {
+        font-size: 20px;
+        line-height: 50px;
       }
-      .submit-btn{
-        width: 100px;
-        height: 50px;
-        padding: 0 30px;
-        margin-left: 15px;
-        background-color: $main_bule_light;
-        color: white;
-        cursor: pointer;
+      .hidden {
+        display: none;
       }
-    
+    }
+    &__submit {
+      background-color:$main_bule_light;
+      border: none;
+      color: $white;
+      float: right;
+      font-size: 16px;
+      height: 50px;
+      margin-left: 15px;
+      padding: 0 30px;
+    }
   }
+
+
+  // .form{
+  //   height: 90px;
+  //   padding: 20px 40px;
+  //   background-color: #ddd;
+  //   box-sizing: border-box;
+  //   &__message{
+  //     display: flex;
+  //     border: none;
+  //     height: 50px;
+  //     width: 100%;
+  //   }
+  //     &__input-box{
+  //       position: relative;
+  //       width: 100%;
+  //       &__text{
+  //         height: 50px;
+  //         width: calc(100% - 50px);
+  //         padding: 0 40px 0 10px;
+  //         color: $main_gray_dark;
+  //         border-style: none;
+  //       }
+  //       &__image{
+  //         font-size: 1.3rem;
+  //         position: absolute;
+  //         top: 10px;
+  //         right: 10px;
+  //         cursor: pointer;
+  //         .hidden{
+  //           display: none;
+  //         }
+  //       }
+  //     }
+  //     .submit-btn{
+  //       width: 100px;
+  //       height: 50px;
+  //       padding: 0 30px;
+  //       margin-left: 15px;
+  //       background-color: $main_bule_light;
+  //       color: white;
+  //       cursor: pointer;
+  //     }
+    
+  // }
 }
