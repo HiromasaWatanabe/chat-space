@@ -2,11 +2,12 @@
   .main-chat-header
     .main-chat-header__left-box
       %h2.main-chat-header__left-box__current-group
-        a
+        = @group.name
       %ul.main-chat-header__left-box__member-list
         Menber:
         %li.main-chat-header__left-box__member-list__member
-          = current_user.name
+        - @group.users.each do |user|
+          = user.name
     .main-chat-header__edit-btn
       = link_to "Edit","/groups/#{current_user.id}/edit",method: :get
       
