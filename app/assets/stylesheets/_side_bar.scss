@@ -15,6 +15,17 @@
       &__user-name{
         font-size: 18px;
       }
+      &__menu{
+        display: inline-block;
+        display: flex;
+        .list{
+          display: inline-block;
+        }
+        .icon{
+          color: $white;
+          font-size: 16px;
+        }
+      }
     }
   }
 

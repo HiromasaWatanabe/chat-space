@@ -4,12 +4,12 @@
       %p.side-header__box__user-name
         = current_user.name
       %ui.side-header__box__menu
-        =link_to "/groups/new", class: "side-header__box__menu__new-group" do
-          %i.fa.fa-edit
-          %span<>
-        =link_to "/users/#{current_user.id}/edit",method: :get, class: "side-header__box__menu__edit-user" do
-          %i.fas.fa-cog
-          %span<>
+        %li.list
+          = link_to '/groups/new' do
+            = icon('fa', 'edit',class: 'icon')
+        %li.list
+          = link_to "/users/#{current_user.id}/edit" do
+            = icon('fa', 'cog',class: 'icon')
 
 
   .groups
