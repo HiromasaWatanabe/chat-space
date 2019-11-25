@@ -58,8 +58,8 @@ $(function(){
       type: 'get',
       data: {id: last_message_id},
       dataType: 'json',
-      processData: false,
-      contentType: false
+      // processData: false,
+      // contentType: false
       })
       .done(function(messages) {
         var insertHTML = '';
@@ -67,7 +67,7 @@ $(function(){
           insertHTML = buildHTML(message); 
           $('.messages').append(insertHTML);
         })
-        $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 1);  
+        $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');  
       })
       .fail(function() {
         alert('error');
